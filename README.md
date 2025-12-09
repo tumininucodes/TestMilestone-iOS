@@ -47,6 +47,7 @@ To ensure robustness, the app implements autoreconnection strategies:
 -   **UI Feedback**: ViewModels observe the `connectionState`. If the state is `.retrying`, a visible banner or message is displayed to the user.
 
 ## Known Limitations
+- **App Test and Debugging**: App performance shouldn't be tested in debug mode as XCode debugger is heavy and affects keyboard input latency and display also.
 - **Time Synchronization and Latency**: For the purpose of the test, timestamps are generated using
   the device's local time, which may not align perfectly with the server or other
   clients. Reason is because of the latency calculation. The provisioned Golang server at
